@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moveyy/home.dart';
+import 'package:moveyy/pages/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Moveyy',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.green,
+          primaryColor: const Color(0xff00e36a),
+          appBarTheme: const AppBarTheme(backgroundColor: Color(0xff00e36a))),
       home: const Home(),
     );
   }
 }
-
