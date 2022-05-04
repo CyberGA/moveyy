@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moveyy/logic/cubit/movie_cubit.dart';
 import 'package:moveyy/pages/home.dart';
 
 void main() {
@@ -17,7 +19,10 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green,
           primaryColor: const Color(0xff00e36a),
           appBarTheme: const AppBarTheme(backgroundColor: Color(0xff00e36a))),
-      home: const Home(),
+      home: BlocProvider(
+        create: (context) => MovieCubit(),
+        child: const Home(),
+      ),
     );
   }
 }
